@@ -17,9 +17,27 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
 
+/* .container {
+  height: 700px;
+  background-color: lightgrey;
+  width: 90%;
+  margin:auto;
+  background-color: #f4f1ec;
+  border: 1px solid black;
+  
+} */
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
+
+fonts :
+font-family: 'Bungee', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+
+
  */

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
+
+    <!--Font Awesome:  -->
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">  
+
+   
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -9,6 +20,11 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,10 +36,51 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <div class="spanNavDiv">
+        <span>tweeter</span>
+      </div>
+      <div class="textNavDiv">
+        <h3 class="navBarText">Write a new tweet</h3>
+        <i class="fas fa-angle-double-down"></i>
+        
+      </div>
     </nav>
-
+    <div class="parentOfHeader">
+      <header>
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2>Your Name</h2>
+        </div>
+    </header>
+    </div>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+
+        <form class = "tweet-box" id="next-tweet" action="/tweet" method="POST">
+
+          <div class="tweet-content">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </div>
+
+          <div class="btn-container">
+            <button type="submit" class="tweet-button">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+
+        </form>
+
+      </section>
+      <h1> Necessitatibus, cumque?</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere, ea quasi magni doloremque incidunt minima maxime, assumenda excepturi aliquid totam ad repellendus natus commodi! Voluptatem dolor debitis fugit praesentium consectetur commodi!</p>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p> Aspernatur eveniet atque quo fugiat quaerat provident consequatur ipsum eum beatae harum.  iusto!</p>
+
+    </main>
   </body>
 </html>

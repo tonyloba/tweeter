@@ -1,0 +1,35 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0 1.5em 0 1.5em;
+ 
+
+
+}
+.spanNavDiv{
+  height: 120px;
+  line-height: 40px;
+  float:left;
+  display: flex;
+  align-items: center;
+}
+span {
+  font-family: 'Bungee', cursive; 
+}
+
+.textNavDiv{
+  float: right;
+  
+}
+.fa, .fas {
+
+font-size: 50px;
+color:red
+}
+
+.navBarText {
+  margin-bottom: 0;
+}
+
