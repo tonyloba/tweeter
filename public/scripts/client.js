@@ -7,22 +7,22 @@
 
 
 
-$(document).ready(function() { 
+$(document).ready(function () {
 
   function createCont(str) {
-    var div = document.createElement('div')
+    let div = document.createElement('div')
     div.appendChild(document.createTextNode(str))
     return div.innerHTML
-   }
+  }
 
-   function createTweetElement(tweet) {
+  function createTweetElement(tweet) {
     let name = tweet.user.name
     let smallAvatar = tweet.user.avatars.small
     let handle = tweet.user.handle
     let content = tweet.content.text
-    
+
     let $tweet = $(
-        `<article class="tweet"> 
+      `<article class="tweet"> 
          
           <div class = "hdr">
             <div class="user">
@@ -45,17 +45,17 @@ $(document).ready(function() {
             </icons>
           </footer>
         </article>`);
-      return $tweet;
-    }
+    return $tweet;
+  }
 
 
   const renderTweets = (tweets) => {
     // clear out container
     //  $('#tweets-container').empty();   
-    for(const tweet of tweets) {      
+    for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       //  appends $tweet  to the tweets container
-      $('#tweets-container').prepend($tweet);  //or append
+      $('#tweets-container').prepend($tweet); //or append
     }
   }
 
@@ -74,40 +74,38 @@ $(document).ready(function() {
 
     if (!strLength) {
       // alert('Tweet field is empty!')
-      $(".errM").text("Your tweet must contain a message!");     
-      
-    } 
+      $(".errM").text("Your tweet must contain a message!");
+
+    }
     if (strLength > 140) {
       // alert('You are out of characters!');
       $(".errM").text("You have exceeded the limit!")
       return
-    } 
-    
+    }
 
-    $.ajax({ 
-      url:"/tweets", 
-      data: serializeData, 
+
+    $.ajax({
+      url: "/tweets",
+      data: serializeData,
       method: "POST",
     }).then(() => loadTweets())
     $(".tweet-box").trigger("reset"); //clear the message from the box after submit box is hit    
     $("#counter").text('140'); // resets counter to 140
-    $( "#tweet-text" ).click(function() {
-      $( ".errM" ).empty();
-    });
-    
+    $("#tweet-text").click(function () {
+      $(".errM").empty();
     });
 
-    const loadTweets = function() {
-      $.ajax({
-        url: "/tweets", 
-        method: "GET",
-        dataType:"json",
-        success: "it was a success"
-      }).then((tweets) => renderTweets(tweets))
-    }
-    loadTweets();
-
-    
   });
 
+  const loadTweets = function () {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+      success: "it was a success"
+    }).then((tweets) => renderTweets(tweets))
+  }
+  loadTweets();
 
+
+});
