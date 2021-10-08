@@ -6,9 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of tweet compose box and tweets for mobile"]()
-!["Screenshot of tweet compose box and tweets for desktop"]()
-!["Screenshot of tweet box error message forn too many characters"]()
+!["Screenshot of tweet compose box and tweets for mobile"](https://github.com/tonyloba/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%2010.51.35%20PM.png)
+!["Screenshot of tweet in action"](https://github.com/tonyloba/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%2010.53.11%20PM.png)
+!["Screenshot of tweet in action"](https://github.com/tonyloba/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%2010.54.08%20PM.png)
+!["Screenshot of tweet in action"](https://github.com/tonyloba/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%2010.54.55%20PM.png)
+!["Screenshot of tweet compose box and tweets for desktop"](https://github.com/tonyloba/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%2010.56.28%20PM.png)
 
 
 ## Getting Started
