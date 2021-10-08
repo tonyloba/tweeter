@@ -20,7 +20,7 @@ $(document).ready(function() {
     let smallAvatar = tweet.user.avatars.small
     let handle = tweet.user.handle
     let content = tweet.content.text
-    // let timestamp = $.timeago(tweet.created_at)
+    
     let $tweet = $(
         `<article class="tweet"> 
          
@@ -36,7 +36,7 @@ $(document).ready(function() {
           
           <div class="tweeter">${createCont(tweet.content.text)}</div>
           <footer>
-            <span class="data">10 hrs ago</span>
+            <span class="data">${timeago.format(tweet.created_at)}</span>
             <span class="err"></span>
             <icons>
               <i class="fas fa-flag fa-3xs"></i>

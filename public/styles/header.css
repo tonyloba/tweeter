@@ -16,3 +16,15 @@ header {
   width: 100%;
   color: white;
 }
+
+/* MEDIA : */
+
+/* @media only screen and (min-width:1024px) {
+  header {
+    float: left;
+    width: 35%;
+    background-color: lightsalmon;        
+    background-image: url(/images/asfalt-dark.png);
+     margin-right: 30px;
+  }
+} */
