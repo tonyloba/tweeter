@@ -13,15 +13,13 @@ const tweetStringCounter = function() {
     $("#counter").text(numOfSymbolsLeft);
     $("#counter").css("color", "red");
   } else {
-    $("#counter").text(numOfSymbolsLeft + " Symbols left");
+    $("#counter").text(numOfSymbolsLeft + " Characters left");
     $("#counter").css("color", "#44423b");
   }
 
 
   });
 }
-
-
 
 
 $(document).ready(function() {

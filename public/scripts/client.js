@@ -73,22 +73,28 @@ $(document).ready(function() {
     const strLength = $("#tweet-text").val().length;
 
     if (!strLength) {
-      alert('Tweet field is empty!')       
+      // alert('Tweet field is empty!')
+      $(".errM").text("Your tweet must contain a message!");     
+      
     } 
     if (strLength > 140) {
-      alert('Character count is over the limit!');
-      
-    }
+      // alert('You are out of characters!');
+      $(".errM").text("You have exceeded the limit!")
+      return
+    } 
+    
 
     $.ajax({ 
       url:"/tweets", 
       data: serializeData, 
       method: "POST",
     }).then(() => loadTweets())
-    $(".tweet-box").trigger("reset"); //clear the message from the box after submit box is hit
+    $(".tweet-box").trigger("reset"); //clear the message from the box after submit box is hit    
     $("#counter").text('140'); // resets counter to 140
-
-
+    $( "#tweet-text" ).click(function() {
+      $( ".errM" ).empty();
+    });
+    
     });
 
     const loadTweets = function() {

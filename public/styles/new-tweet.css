@@ -1,6 +1,6 @@
-div {
+/* div {
   border: 1px solid black;
-}
+} */
 .container {
   display: flex;
   justify-content: center;
@@ -76,6 +76,8 @@ article.tweet {
   opacity: 75%;
   margin: 2em 0;
   background-color: bisque;
+  z-index:-1;
+  
 }
 
 article.tweet:hover {
@@ -145,19 +147,27 @@ article.tweet footer:hover {
   font-weight: bold;
   padding: 1em 1em 1em 0;
   margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.error-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.error-msg {
-  display: none;
+.errM {
+  /* display: none; */  
   text-align: center;
-  border: 4px solid red;
+  /* border: 4px solid red; */
   color: red;
   font-family: Source Sans Pro, sans-serif;
   font-size: 20pt;
   margin: auto;
   margin-top: 30px;
   height: 40px;
+  font-weight: bold;
 }
 
 #msg {
